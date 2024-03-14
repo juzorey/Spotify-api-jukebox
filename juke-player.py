@@ -17,7 +17,7 @@ while True:
                                                        redirect_uri="http://localhost:8080",
                                                        scope="user-read-playback-state,user-modify-playback-state"))
         
-        # create an infinite while loop that will always be waiting for a new scan
+
         while True:
             print("Waiting for record scan...")
             id= reader.read()[0]
@@ -39,7 +39,7 @@ while True:
                 
             # continue adding as many "elifs" for songs/albums that you want to play
 
-    # if there is an error, skip it and try the code again (i.e. timeout issues, no active device error, etc)
+    # if error, skip it and try the code again (i.e. timeout issues, no active device error, etc)
     except Exception as e:
         print(e)
         pass
